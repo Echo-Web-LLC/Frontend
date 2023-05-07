@@ -51,7 +51,7 @@ body {
     display: flex;
     justify-content: center;
     text-decoration: underline;
-
+    padding: 1%;
 }
 
 .Header_2_Demo {
