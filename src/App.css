@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+body {
+    background: linear-gradient(135deg, #0f2845, #0c1522);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Navigation_Bar {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    padding: 2%;
+    color: whitesmoke;
+    font-weight: 400;
+    font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Link {
+    list-style: none;
+    color: whitesmoke;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: underline;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.canvas_3D_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-.App-link {
-  color: #61dafb;
+.Landing_Header {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 96px;
+    top: 50%;
+    color: whitesmoke
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Demo */
+
+.Demo_Page_E-commerce {
+    background-color: white;
+}
+
+.Header_1_Demo {
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+
+}
+
+.Header_2_Demo {
+    text-indent: 40px;
 }
