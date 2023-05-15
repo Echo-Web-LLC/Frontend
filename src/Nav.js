@@ -2,6 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Nav(props) {
+
+// todo:
+// Make current page bolded on Nav
+
     return (
         <>
             <nav className="Navigation_Bar">
