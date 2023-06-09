@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from './Images/Echo_web_llc_3.png'
 
 function Nav(props) {
 
@@ -8,22 +9,29 @@ function Nav(props) {
 
     return (
         <>
-            <nav className="Navigation_Bar">
+            <nav className="Navigation_Bar_Logo">
                 <Link className='Link' to='/'>
-                    Home
+                    <img className='Logo' src={logo} alt="logo"/>
                 </Link>
-                <li>
+                <div className='Navigation_Bar'>
+                <Link to='about' className='Link'>
                     About
-                </li>
-                <li>
-                    Services
-                </li>
-                <Link to="demo" className="Link">
+                </Link>
+                <div class="services-menu">
+                <Link to='services' className='Link'> Services </Link>
+                    <ul className="services-menu-content">
+                        <Link className='services-design'>Design</Link>
+                        <Link className='services-development'>Development</Link>
+                        <Link className='services-maintenance'>Maintenance</Link>
+                    </ul>
+                </div>
+                <Link to="demo" className='Link'>
                     Demo
                 </Link>
-                <li>
+                <Link to='contact' className='Link'>
                     Contact
-                </li>
+                </Link>
+                </div>
             </nav>   
         </>
     );
