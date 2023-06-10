@@ -55,7 +55,7 @@ const Landing = () => {
     </Helmet>
       <title> landing page </title>
       <meta name='description' content='Beginner friendly page for learning React Helmet.' />
-      <section id="fade-in" className="overflow-hidden bg-gray-50 grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2">
+      <section id="fade-in" className="overflow-hidden bg-gray-50 grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 -pt-40">
         <div className="p-8 md:p-12 lg:px-16 lg:py-36">
           <div className="mx-auto max-w-lg text-center ltr:sm:text-left rtl:sm:text-right">
             <h1 className="flex justify-center text-sm md:text-lg lg:text-2xl xl:text-3xl font-bold lg:text-left text-gray-900 text-center">

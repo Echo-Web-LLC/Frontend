@@ -11,7 +11,7 @@ const Cards = React.forwardRef((props, ref) => {
 </Helmet>
 <section ref={ref}>
 <div class="bg-teal-50">
-    <h1 class="flex justify-center text-2xl font-semibold text-gray-900 pt-10">
+    <h1 class="flex justify-center text-2xl font-semibold text-gray-900 pt-10 -mt-28">
         Our Services  
     </h1>
     <div class="grid grid-cols-1 xl:grid-cols-3 gap-10 p-10 px-20 lg:px-30 xl:px-40">
