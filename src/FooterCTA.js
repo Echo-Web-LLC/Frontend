@@ -40,7 +40,7 @@ return (
 
     <div class="flex justify-center pt-6">
         <button>
-        <a href="https://" class="inline-block rounded bg-teal-500 px-12 py-3 text-sm font-medium text-white transition hover:bg-teal-400 focus:outline-none focus:ring focus:ring-indigo-400">
+        <a href="https://ixqu3aocu0m.typeform.com/to/WpcyelXK" class="inline-block rounded bg-teal-500 px-12 py-3 text-sm font-medium text-white transition hover:bg-teal-400 focus:outline-none focus:ring focus:ring-indigo-400">
           Get Quote
         </a>
         </button>

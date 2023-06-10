@@ -68,7 +68,7 @@ const Landing = () => {
 
             <div className="mt-4 md:mt-8">
               <a
-                href="https://"
+                href="https://ixqu3aocu0m.typeform.com/to/WpcyelXK"
                 className="inline-block rounded bg-blue-400 px-12 py-3 text-sm font-medium text-white transition hover:bg-blue-500 focus:outline-none focus:ring focus:ring-indigo-400"
               >
                 Start Today

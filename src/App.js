@@ -3,8 +3,14 @@ import Landing from "./Landing";
 import { HelmetProvider } from 'react-helmet-async';
 import "./App.css";
 
+//TO DO:
+//SEO 
+//Production build
+//Other site performance related things
+
 function App() {
   const helmetContext = {};
+  
   return (
     <>
     <HelmetProvider context={helmetContext}>

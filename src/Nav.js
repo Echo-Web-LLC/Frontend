@@ -31,7 +31,7 @@ function Nav(props) {
                 </Link> */}
 <a
   class="group absolute right-10 sm:right-20 inline-flex items-center overflow-hidden rounded border border-current px-4 sm:px-8 py-3 mt-6 text-gray-600 focus:outline-none focus:ring active:text-gray-500 mb-5"
-  href="/download"
+  href="https://ixqu3aocu0m.typeform.com/to/WpcyelXK"
 >
   <span class="absolute -end-full transition-all group-hover:end-4">
     <svg
