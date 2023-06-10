@@ -59,14 +59,14 @@ const Landing = () => {
         <div className="p-8 md:p-12 lg:px-16 lg:py-36">
           <div className="mx-auto max-w-lg text-center ltr:sm:text-left rtl:sm:text-right">
             <h1 className="flex justify-center text-sm md:text-lg lg:text-2xl xl:text-3xl font-bold lg:text-left text-gray-900 text-center">
-              Unlock the Power of Minimalistic <br/> Design and User Experience <br/> for Your Business..
+              Unlock the Power of Minimalistic Design and User Experience for Your Business..
             </h1>
 
-            <p className="hidden text-center text-gray-500 md:mt-4 md:block">
-              Experience the difference of our comprehensive services <br/> encompassing design, development, maintenance, <br/>  and client collaboration today.
+            <p className="hidden text-center lg:text-left text-gray-500 md:mt-4 md:block">
+              Experience the difference of our comprehensive services encompassing design, development, maintenance,  and client collaboration today.
             </p>
 
-            <div className="mt-4 md:mt-8">
+            <div className="mt-4 md:mt-8 flex justify-center lg:justify-start">
               <a
                 href="https://ixqu3aocu0m.typeform.com/to/WpcyelXK"
                 className="inline-block rounded bg-blue-400 px-12 py-3 text-sm font-medium text-white transition hover:bg-blue-500 focus:outline-none focus:ring focus:ring-indigo-400"
