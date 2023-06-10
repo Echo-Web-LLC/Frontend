@@ -47,9 +47,9 @@ return (
     </div>
   </div>
   <div class="bg-blue-50 pt-6">
-       <h2 class=" flex justify-center text-md font-bold text-gray-900 md:text-xl"> Speaking of Quotes, here's a random inspirational quote.. </h2>
+       <h2 class=" flex justify-center text-xs text-center font-bold text-gray-900 md:text-xl"> Speaking of Quotes, here's a random inspirational quote.. </h2>
 
-        <p class="flex justify-center text-sm text-center text-gray-900 mt-4 pb-8">
+        <p class="flex justify-center text-xs text-center text-gray-900 mt-4 pb-8">
             "{randomQuote}"
         </p>
     </div>
