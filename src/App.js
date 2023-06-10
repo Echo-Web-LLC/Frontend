@@ -1,20 +1,20 @@
 import Nav from "./Nav";
 import Landing from "./Landing";
-import Demo from "./Demo";
+import { HelmetProvider } from 'react-helmet-async';
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
+  const helmetContext = {};
   return (
     <>
-      <BrowserRouter>
+    <HelmetProvider context={helmetContext}>
         <Nav></Nav>
-        <Routes>
-          <Route path="/" element={<Landing></Landing>}></Route>
-          <Route path="/demo" element={<Demo></Demo>}></Route>
-        </Routes>
-      </BrowserRouter>
-    </>
+        <Landing></Landing>
+          {/* <Route path="/demo" element={<Demo></Demo>}></Route>
+          <Route path="/about" element={<About></About>}></Route>
+          <Route path="/contact" element={<Contact></Contact>}></Route> */}
+    </HelmetProvider>
+  </>
   );
 }
 
