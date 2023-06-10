@@ -6,7 +6,7 @@ const About = React.forwardRef((props, ref) => {
   return (
     <>
     <Helmet>
-      <title> About </title>
+      <title> Echo Web, LLC </title>
       <meta name='about' content='Information on companies mission statement and expertise'/>
     </Helmet>
     <section ref={ref}>

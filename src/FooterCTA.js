@@ -20,7 +20,7 @@ const FooterCTA = React.forwardRef((props, ref) => {
 return (      
 <>
 <Helmet>
-      <title> Footer </title>
+      <title> Echo Web, LLC </title>
       <meta name='Footer' content='Contains Call to Action'/>
 </Helmet>
 <section ref={ref}>

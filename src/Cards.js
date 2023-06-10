@@ -6,7 +6,7 @@ const Cards = React.forwardRef((props, ref) => {
     return (
 <div>
 <Helmet>
-      <title> Footer </title>
+      <title> Echo Web, LLC </title>
       <meta name='Footer' content='Information about services provided by Business'/>
 </Helmet>
 <section ref={ref}>
