@@ -9,7 +9,7 @@ function Nav(props) {
     return (
         <>
             <nav class="flex">
-                <img class='h-24 pl-12' src={logo} alt="logo"/>
+                <img class='h-24 pl-12 relative sm:left-12' src={logo} alt="logo"/>
              
                 {/* <div className='Navigation_Bar'> */}
                 {/* <Link to='about' className='Link'>
