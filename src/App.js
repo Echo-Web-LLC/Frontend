@@ -23,10 +23,13 @@ function App() {
   return (
     <>
     <HelmetProvider context={helmetContext}>
+        <div class="bg-yellow-50">
+        <Nav></Nav>
         <Landing></Landing>
           {/* <Route path="/demo" element={<Demo></Demo>}></Route>
           <Route path="/about" element={<About></About>}></Route>
           <Route path="/contact" element={<Contact></Contact>}></Route> */}
+        </div>
     </HelmetProvider>
   </>
   );

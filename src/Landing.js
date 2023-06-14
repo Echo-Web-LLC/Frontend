@@ -4,15 +4,14 @@ import About from "./About";
 import FooterCTA from "./FooterCTA";
 import { motion, useAnimation } from "framer-motion";
 import { Helmet } from 'react-helmet-async'
-import Nav from './Nav';
 import './App.css'
 
 const Landing = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [ textChange, setTextChange ] = useState([
-    { className: "cornflower", content: "Minimalistic." },
-    { className: "cornflower", content: "Flow." },
-    { className: "cornflower", content: "Impactful." }
+    { className: "coral", content: "Minimalism." },
+    { className: "sea", content: "Flow." },
+    { className: "cornflower", content: "Impact." }
   ]);
 
   useEffect(() => {
@@ -74,10 +73,9 @@ const Landing = () => {
       </Helmet>
       <div>
         <section id="fade-in" className="overflow-hidden shadow-2xl opacity-90">
-          <Nav></Nav>
           <div>
-            <div className="rounded-md fade-in-comp hover:shadow-2xl mx-auto max-w-lg text-center bg-blue-50 shadow-xl bg-opacity-50 p-10">
-              <h1 className="flex justify-center lg:-mx-2 text-5xl lg:text-6xl font-bold text-gray-900 text-center opacity-100 drop-shadow-xl">
+            <div className="rounded-md fade-in-comp hover:shadow-2xl mx-auto max-w-lg text-center shadow-xl bg-opacity-75 p-10">
+              <h1 className="flex justify-center lg:-mx-2 text-5xl lg:text-6xl font-bold text-white text-center opacity-100 drop-shadow-xl">
                 Equip Your Brand.
               </h1>
 
@@ -87,7 +85,7 @@ const Landing = () => {
                 </span>
               </h2>
 
-              <p className="text-3xl text-center justify-centertext-white my-2 md:block drop-shadow-xl text-gray-800 font-bold p-2 rounded-md">
+              <p className="text-3xl text-center justify-centertext-white my-2 md:block drop-shadow-xl text-white font-bold p-2 rounded-md">
                 Less Clutter. <br/>
                 More Value.
               </p>
@@ -100,24 +98,23 @@ const Landing = () => {
                   Start Today
                 </a>
               </div> */}
-              <div className="flex justify-center opacity-100">
+              <div className="grid grid-cols-1 lg:grid-cols-2 justify-center opacity-100 gap-5">
                 <a
-                   className="group inline-block font-extrabold mt-2 rounded shadow-lg hover:shadow-2xl px-7 py-2 text-gray-900 text-2xl  transition focus:outline-none bg-gray-50 ring bg-opacity-90"
+                   className="group ring inline-block font-extrabold mt-2 rounded px-4 py-2 text-gray-900 text-2xl  transition focus:outline-none bg-opacity-90 hover:drop-shadow-lg"
                   id="colorfill"
                   href="https://demosite.app"
                 >
-                  <span className="font-bold text-gray-700 text-lg transition-all drop-shadow-xl">
+                  <span className="font-bold text-gray-50 text-lg transition-all hover:drop-shadow-xl">
                     Learn More
                   </span>
                 </a>
-              </div>
-              <div className="flex justify-center opacity-100 mt-4">
+             
                 <a
-                  className="group inline-block font-extrabold mt-2 rounded shadow-lg hover:shadow-2xl px-12 py-2 text-gray-900 text-2xl  transition focus:outline-none bg-blue-200 ring bg-opacity-90"
+                  className="group ring ring-gray-50 inline-block font-extrabold mt-2 rounded px-4 py-2 text-gray-900 text-2xl  transition focus:outline-none bg-opacity-90 hover:drop-shadow-lg"
                   id="colorfill"
                   href="https://demosite.app"
                 >
-                  <span className="text-gray-700 font-bold text-lg transition-all drop-shadow-xl">
+                  <span className="text-gray-50 font-bold text-lg transition-all hover:drop-shadow-xl">
                     Demo
                   </span>
                 </a>
