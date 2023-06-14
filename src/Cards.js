@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
 import './App.css';
 
 const Cards = React.forwardRef((props, ref) => {
@@ -10,11 +10,10 @@ const Cards = React.forwardRef((props, ref) => {
       <meta name='Footer' content='Information about services provided by Business'/>
 </Helmet>
 <section ref={ref}>
-<div class="bg-teal-50">
-    <h1 class="flex justify-center text-2xl font-semibold text-gray-900 pt-10 -mt-28">
+    <h1 class="flex justify-center text-5xl font-semibold text-gray-700">
         Our Services  
     </h1>
-    <div class="grid grid-cols-1 xl:grid-cols-3 gap-10 p-10 px-10 xl:px-40">
+    <div className="grid grid-cols-1 xl:grid-cols-3 gap-10 p-10 px-10 xl:px-40">
         <article class="overflow-hidden rounded-lg shadow transition hover:shadow-lg">
   <img
     alt="Girl Thinking"
@@ -99,7 +98,6 @@ const Cards = React.forwardRef((props, ref) => {
         </span>
         </a>
     </div> */}
-</div>
 </section>
 </div>
 

@@ -1,21 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const FooterCTA = React.forwardRef((props, ref) => {
-    const [randomQuote, setRandomQuote] = useState('');
+
     const date = new Date();
     const year = date.getFullYear();
-
-    useEffect(() => {
-    fetch("https://type.fit/api/quotes")
-      .then(response => response.json())
-      .then(data => {
-        const randomNumber = Math.floor(Math.random() * data.length);
-        const quote = data[randomNumber].text;
-        setRandomQuote(quote);
-      });
-    }, []);
-
 
 return (      
 <>
@@ -46,13 +35,6 @@ return (
         </button>
     </div>
   </div>
-  <div class="bg-blue-50 pt-6">
-       <h2 class=" flex justify-center text-xs text-center font-bold text-gray-900 md:text-xl"> Speaking of Quotes, here's a random inspirational quote.. </h2>
-
-        <p class="flex justify-center text-xs text-center text-gray-900 mt-4 pb-8">
-            "{randomQuote}"
-        </p>
-    </div>
 </section>
  <p class="flex justify-center text-xs sm:text-sm text-center text-gray-400">
             Copyright &copy; {year}
