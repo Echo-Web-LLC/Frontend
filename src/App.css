@@ -21,12 +21,6 @@ body {
   background-attachment: fixed;
 }
 
-.Logo {
-  height: 95px;
-  width: 95px;
-  margin-left: 100px;
-}
-
 #cta-banner-bg {
   background-image: url('./Images//demo-9.jpg');
   width: 100%;
@@ -34,6 +28,29 @@ body {
   animation: fadeInOutAnimationRight 1s;
 }
 
+#fade-in {
+  background-image: url('./Images//demo-2.png');
+  padding-bottom: 150px;
+  width: 100%;
+  transition: 0.25s all ease-in-out;
+  animation: fade-in 1.5s;
+  background-size: cover;
+  transform: scale(1);
+  background-position: calc(25%);
+  background-repeat: no-repeat;
+}
+
+.bg-image-opac {
+  background-image: url('./Images/bg-wall.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.Logo {
+  height: 95px;
+  width: 95px;
+  margin-left: 100px;
+}
 
 .Link {
   display: flex;
@@ -45,14 +62,6 @@ body {
   text-decoration: none;
 }
 
-#fade-in {
-  background-image: url('./Images//demo-9.jpg');
-  padding-bottom: 150px;
-  width: 100%;
-  transition: 0.25s all ease-in-out;
-  animation: fade-in 1.5s;
-  background-size: cover;
-}
 
 .changingText::before {
   content: "Minimalism.";
@@ -66,11 +75,11 @@ body {
 }
 
 .coral {
-  color: cornflowerblue;
+  color: rgb(45, 115, 235);
 }
 
 .sea {
-  color: lightseagreen;
+  color: rgb(20, 175, 175);
 }
 
 .cornflower {
@@ -219,7 +228,7 @@ body {
 /* Desktops and Tablets */
 @media screen and (min-width: 640px) {
   #fade-in {
-    background-image: url('./Images//demo-9.jpg');
+    background-image: url('./Images//demo-2.png');
     padding-bottom: 125px;
     width: 100%;
     transition: 0.25s all ease-in-out;
@@ -235,13 +244,14 @@ body {
 
 @media screen and (min-width: 1024px) {
   #fade-in {
-    background-image: url('./Images//demo-9.jpg');
+    background-image: url('./Images//demo-2.png');
     padding-top: 50px;
     padding-bottom: 200px;
     width: 100%;
     transition: 0.25s all ease-in-out;
     animation: fade-in 1.5s;
-    background-size: cover;
+    background-size: calc(50%);
+    background-position: bottom;
     transform: scale(1);
   }
 }

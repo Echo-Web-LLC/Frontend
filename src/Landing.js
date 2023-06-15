@@ -69,13 +69,13 @@ const Landing = () => {
     <>
       <Helmet>
         <title> Echo Web, LLC </title>
-        <meta name='Landing Page' content='Call to actions and information about Echo Web, LLC.' />
+        <meta name='Landing Page' content='Call to actions and information about Echo Web, LLC.'/>
       </Helmet>
       <div>
         <section id="fade-in" className="overflow-hidden shadow-2xl opacity-90">
           <div>
-            <div className="rounded-md fade-in-comp hover:shadow-2xl mx-auto max-w-lg text-center shadow-xl bg-opacity-75 p-10">
-              <h1 className="flex justify-center lg:-mx-2 text-5xl lg:text-6xl font-bold text-white text-center opacity-100 drop-shadow-xl">
+            <div className="rounded-md fade-in-comp mx-auto max-w-lg text-center  p-20 bg-gray-50 bg-opacity-30">
+              <h1 className="flex justify-center lg:-mx-2 text-5xl lg:text-6xl font-bold text-center text-gray-900 opacity-100 drop-shadow-xl">
                 Equip Your Brand.
               </h1>
 
@@ -85,7 +85,7 @@ const Landing = () => {
                 </span>
               </h2>
 
-              <p className="text-3xl text-center justify-centertext-white my-2 md:block drop-shadow-xl text-white font-bold p-2 rounded-md">
+              <p className="text-3xl text-center justify-centertext-white my-2 md:block drop-shadow-xl text-black font-bold p-2 rounded-md shadow-md">
                 Less Clutter. <br/>
                 More Value.
               </p>
@@ -100,21 +100,21 @@ const Landing = () => {
               </div> */}
               <div className="grid grid-cols-1 lg:grid-cols-2 justify-center opacity-100 gap-5">
                 <a
-                   className="group ring inline-block font-extrabold mt-2 rounded px-4 py-2 text-gray-900 text-2xl  transition focus:outline-none bg-opacity-90 hover:drop-shadow-lg"
+                   className="group ring ring-gray-800 inline-block font-extrabold mt-2 rounded px-4 py-2 text-gray-900 text-2xl  transition focus:outline-none bg-opacity-90 hover:drop-shadow-lg"
                   id="colorfill"
                   href="https://demosite.app"
                 >
-                  <span className="font-bold text-gray-50 text-lg transition-all hover:drop-shadow-xl">
+                  <span className="font-bold text-gray-800 text-lg transition-all hover:drop-shadow-xl">
                     Learn More
                   </span>
                 </a>
              
                 <a
-                  className="group ring ring-gray-50 inline-block font-extrabold mt-2 rounded px-4 py-2 text-gray-900 text-2xl  transition focus:outline-none bg-opacity-90 hover:drop-shadow-lg"
+                  className="group ring ring-gray-800 inline-block font-extrabold mt-2 rounded px-4 py-2 text-gray-900 text-2xl  transition focus:outline-none bg-opacity-90 hover:drop-shadow-lg"
                   id="colorfill"
                   href="https://demosite.app"
                 >
-                  <span className="text-gray-50 font-bold text-lg transition-all hover:drop-shadow-xl">
+                  <span className="text-gray-800 font-bold text-lg transition-all hover:drop-shadow-xl">
                     Demo
                   </span>
                 </a>
@@ -127,7 +127,7 @@ const Landing = () => {
           className="object-cover sm:h-full opacity-85"
         ></div> */}
         </section>
-        <div ref={cardsRef}>
+        <div class="-mt-28" ref={cardsRef}>
           <motion.div
             initial={{ opacity: 0.34, y: 100 }}
             animate={cardsControls}

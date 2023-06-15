@@ -4,16 +4,60 @@ import './App.css';
 
 const Cards = React.forwardRef((props, ref) => {
     return (
-<div>
+<>
+<section
+  class="relative bg-[url('./Images/demo-4.jpg')] bg-cover bg-no-repeat"
+>
+  <div
+    class="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"
+  ></div>
+
+  <div
+    class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
+  >
+    <div class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+      <h1 class="text-3xl font-extrabold sm:text-5xl">
+        Let us find your
+
+        <strong class="block font-extrabold text-rose-700">
+          Forever Home.
+        </strong>
+      </h1>
+
+      <p class="mt-4 max-w-lg sm:text-xl/relaxed">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo
+        tenetur fuga ducimus numquam ea!
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-4 text-center">
+        <a
+          href="#"
+          class="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
+        >
+          Get Started
+        </a>
+
+        <a
+          href="#"
+          class="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+        >
+          Learn More
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{/* <div className="bg-image-opac">
+<div className="bg-bottom pb-32">
 <Helmet>
       <title> Echo Web, LLC </title>
       <meta name='Footer' content='Information about services provided by Business'/>
 </Helmet>
 <section ref={ref}>
-    <h1 class="flex justify-center text-5xl font-semibold text-gray-700">
-        Our Services  
+    <h1 class="flex justify-center text-5xl lg:text-6xl font-semibold text-gray-50 py-12">
+      Services
     </h1>
-    <div className="grid grid-cols-1 xl:grid-cols-3 gap-10 p-10 px-10 xl:px-40">
+  <div className="grid grid-cols-1 xl:grid-cols-3 gap-10 px-10 xl:px-40">
         <article class="overflow-hidden rounded-lg shadow transition hover:shadow-lg">
   <img
     alt="Girl Thinking"
@@ -88,7 +132,7 @@ const Cards = React.forwardRef((props, ref) => {
     </ul>
   </div>
 </article>
-    </div>
+    </div> */}
     {/* <div class="flex justify-center pb-10">
       <a
           href=""
@@ -98,9 +142,10 @@ const Cards = React.forwardRef((props, ref) => {
         </span>
         </a>
     </div> */}
-</section>
+{/* </section>
 </div>
-
+</div> */}
+</>
     );
 });
 
