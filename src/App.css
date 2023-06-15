@@ -34,9 +34,16 @@ body {
   width: 100%;
   transition: 0.25s all ease-in-out;
   animation: fade-in 1.5s;
-  background-size: cover;
+  background-size: calc(52.5%);
   transform: scale(1);
-  background-position: calc(25%);
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.servicesCTASection {
+  background-image: url('./Images/demo\ -4.png');
+  background-position: center;
+  background-size: calc(75%);
   background-repeat: no-repeat;
 }
 
@@ -233,10 +240,9 @@ body {
     width: 100%;
     transition: 0.25s all ease-in-out;
     animation: fade-in 1.5s;
-    background-size: cover;
-    background-position: center center;
+    background-size: calc(60%);
+    background-position: top;
     transform: scale(1);
-    transform: s
   }
 }
 
@@ -250,8 +256,8 @@ body {
     width: 100%;
     transition: 0.25s all ease-in-out;
     animation: fade-in 1.5s;
-    background-size: calc(50%);
-    background-position: bottom;
+    background-size: calc(30%);
+    background-position: top;
     transform: scale(1);
   }
 }
