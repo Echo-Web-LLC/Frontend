@@ -5,8 +5,15 @@ import './App.css';
 const Cards = React.forwardRef((props, ref) => {
     return (
 <>
+  <Helmet>
+        <title> Echo Web, LLC </title>
+        <meta
+          name="Landing Page"
+          content="List of services from Echo Web, LLC."
+        />
+  </Helmet>
 <section
-  className="servicesCTASection"
+  className="servicesCTASection bg-gray-100"
 >
   <div
     class="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"

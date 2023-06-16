@@ -3,26 +3,46 @@ import Cards from "./Cards";
 import About from "./About";
 import FooterCTA from "./FooterCTA";
 import { motion, useAnimation } from "framer-motion";
-import { Helmet } from 'react-helmet-async'
-import './App.css'
+import { Helmet } from 'react-helmet-async';
+import vid1 from './Images/navy.mp4';
+import vid2 from './Images/blue.mp4';
+import vid3 from './Images/red.mp4';
+import { ScrollSnapContainer, ScrollSnapSection } from 'react-scroll-snap';
+import './App.css';
 
 const Landing = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
-  const [ textChange, setTextChange ] = useState([
-    { className: "coral", content: "Minimalism." },
-    { className: "sea", content: "Flow." },
-    { className: "cornflower", content: "Impact." }
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const [textChange, setTextChange] = useState([
+    { className: "navy", content: "Minimalism.", videoIndex: 0 },
+    { className: "cornflower", content: "Flow.", videoIndex: 1 },
+    { className: "coral", content: "Impact.", videoIndex: 2 }
   ]);
+
+  const videos = [vid1, vid2, vid3];
+  const videoCount = videos.length;
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentTextIndex(prevIndex => (prevIndex + 1) % textChange.length);
-    }, 5000);
+      setCurrentTextIndex(prevIndex => {
+        const newIndex = (prevIndex + 1) % textChange.length;
+        setCurrentVideoIndex(textChange[newIndex].videoIndex);
+        return newIndex;
+      });
+    }, 10000);
 
     return () => {
       clearInterval(interval);
     };
   }, [textChange.length]);
+
+  const handleVideoEnd = () => {
+    setCurrentTextIndex(prevIndex => {
+      const newIndex = (prevIndex + 1) % textChange.length;
+      setCurrentVideoIndex(textChange[newIndex].videoIndex);
+      return newIndex;
+    });
+  };
 
   const cardsRef = useRef(null);
   const aboutRef = useRef(null);
@@ -34,29 +54,20 @@ const Landing = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const cardsContainerTop = cardsRef.current?.offsetTop || 0;
-      const aboutContainerTop = aboutRef.current?.offsetTop || 0;
-      const footerContainerTop = footerRef.current?.offsetTop || 0;
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
 
-      if (scrollY > cardsContainerTop - windowHeight + 100) {
-        cardsControls.start({ opacity: 1 });
-      } else {
-        cardsControls.start({ opacity: .34 });
-      }
+      const cardsContainerTop = cardsRef.current?.offsetTop || 0;
+      const aboutContainerTop = aboutRef.current?.offsetTop || 0;
+      const footerContainerTop = footerRef.current?.offsetTop || 0;
 
-      if (scrollY > aboutContainerTop - windowHeight + 100) {
-        aboutControls.start({ opacity: 1 });
-      } else {
-        aboutControls.start({ opacity: .34 });
-      }
+      const cardsVisible = scrollY > cardsContainerTop - windowHeight;
+      const aboutVisible = scrollY > aboutContainerTop - windowHeight;
+      const footerVisible = scrollY > footerContainerTop - windowHeight;
 
-      if (scrollY > footerContainerTop - windowHeight + 100) {
-        footerControls.start({ opacity: 1 });
-      } else {
-        footerControls.start({ opacity: .34 });
-      }
+      cardsControls.start({ opacity: cardsVisible ? 1 : 0.34 });
+      aboutControls.start({ opacity: aboutVisible ? 1 : 0.34 });
+      footerControls.start({ opacity: footerVisible ? 1 : 0.34 });
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -72,35 +83,34 @@ const Landing = () => {
         <meta name='Landing Page' content='Call to actions and information about Echo Web, LLC.'/>
       </Helmet>
       <div>
-        <section id="fade-in" className="overflow-hidden opacity-90 shadow-lg">
+        <section id="fade-in" className="overflow-hidden hadow-lg bg-white">
+          <video 
+          src={videos[currentVideoIndex]}
+          autoPlay
+          muted
+          onEnded={handleVideoEnd}
+          className="opacity-25 bg-cover object-cover w-full h-full fixed top-0 left-0 z-0"
+        />
           <div>
-            <div className="rounded-md fade-in-comp mx-auto max-w-lg text-center p-10 sm:p-32 lg:p-20 bg-gray-100 bg-opacity-30">
-              <h1 className="flex justify-center lg:-mx-2 text-5xl lg:text-6xl font-bold text-center text-gray-900 opacity-100 drop-shadow-xl">
+            <div className="shadow-lg bg-gray-50 bg-opacity-75 rounded-md fade-in-comp mx-auto max-w-2xl text-center p-10 sm:p-32 lg:p-20">
+              <h1 className="flex justify-center lg:-mx-10 text-6xl lg:text-7xl font-bold text-center text-gray-900 opacity-100 drop-shadow-xl">
                 Equip Your Brand.
               </h1>
 
-              <h2 class="pt-3 font-bold text-5xl lg:text-6xl">
+              <h2 className="font-bold pt-2 text-5xl lg:text-6xl">
                 <span className={textChange[currentTextIndex].className}>
                   {textChange[currentTextIndex].content}
                 </span>
               </h2>
 
-              <p className="text-3xl text-center justify-centertext-white my-2 md:block drop-shadow-xl text-black font-bold p-2 rounded-md">
+              <p className="text-4xl text-center justify-centertext-white my-2 md:block drop-shadow-xl text-black font-bold p-2 rounded-md">
                 Less Clutter. <br/>
                 More Value.
               </p>
 
-              {/* <div className="mt-4 md:mt-8 flex justify-center lg:justify-start">
-                <a
-                  className="inline-block rounded bg-gray-500 px-12 py-3 text-sm font-medium text-white transition hover:bg-gray-400 focus:outline-none focus:ring focus:ring-gray-700"
-                  href="https://ixqu3aocu0m.typeform.com/to/WpcyelXK"
-                >
-                  Start Today
-                </a>
-              </div> */}
               <div className="grid grid-cols-1 lg:grid-cols-2 justify-center opacity-100 gap-5">
                 <a
-                   className="group ring ring-gray-800 inline-block font-extrabold mt-2 rounded px-4 py-2 text-gray-900 text-2xl  transition focus:outline-none bg-opacity-90 hover:drop-shadow-lg bg-gray-50"
+                  className="group ring ring-gray-800 inline-block font-extrabold mt-2 rounded px-4 py-2 text-gray-900 text-2xl  transition focus:outline-none bg-opacity-90 hover:drop-shadow-lg"
                   id="colorfill"
                   href="https://demosite.app"
                 >
@@ -108,9 +118,9 @@ const Landing = () => {
                     Learn More
                   </span>
                 </a>
-             
+
                 <a
-                  className="group ring ring-gray-800 inline-block font-extrabold mt-2 rounded px-4 py-2 text-gray-900 bg-gray-900 text-2xl  transition focus:outline-none bg-opacity-90 hover:drop-shadow-lg"
+                  className="group ring ring-gray-800 inline-block font-extrabold mt-2 rounded px-4 py-2 text-gray-900 bg-opacity-75 bg-gray-900 text-2xl  transition focus:outline-none hover:drop-shadow-lg"
                   id="colorfill"
                   href="https://demosite.app"
                 >
@@ -121,13 +131,8 @@ const Landing = () => {
               </div>
             </div>
           </div>
-
-          {/* <div
-          id="cta-banner-bg"
-          className="object-cover sm:h-full opacity-85"
-        ></div> */}
         </section>
-        <div class="-mt-24" ref={cardsRef}>
+        <div className="-mt-24" ref={cardsRef}>
           <motion.div
             initial={{ opacity: 0.34, y: 100 }}
             animate={cardsControls}
@@ -143,6 +148,7 @@ const Landing = () => {
             animate={aboutControls}
             transition={{ duration: 1 }}
           >
+
             <About />
           </motion.div>
         </div>
@@ -159,6 +165,6 @@ const Landing = () => {
       </div>
     </>
   );
-}
+};
 
 export default Landing;
