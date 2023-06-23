@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './Images/Echo_web_llc_3.png'
+import logo from './Images/logo5122.png'
 
 function Nav(props) {
 
