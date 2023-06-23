@@ -1,4 +1,4 @@
-Mobile body {
+body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: calc(100%);
@@ -13,6 +13,7 @@ Mobile body {
   animation: fade-in 1.5s;
   background-position: center;
   background-repeat: no-repeat;
+  transform: scale(1)
 }
 
 .servicesCTASection {

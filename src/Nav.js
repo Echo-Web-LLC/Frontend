@@ -9,7 +9,7 @@ function Nav(props) {
     return (
         <>
             <nav class="flex shadow-lg">
-                <img class='hover:drop-shadow-xl h-24 pl-12 relative sm:left-12 drop-shadow-lg' src={logo} alt="logo"/>
+                <img class='hover:drop-shadow-xl w-48 pl-12 relative sm:left-12 drop-shadow-lg' src={logo} alt="logo"/>
              
                 {/* <div className='Navigation_Bar'> */}
                 {/* <Link to='about' className='Link'>

@@ -55,11 +55,12 @@ const Landing = () => {
               </h2>
 
               <p className="text-4xl text-center justify-centertext-white my-2 md:block drop-shadow-xl text-gray-800 font-bold p-2 rounded-md">
-                Tested for Innovation
+                {/* Tested for Innovation
                 <br/>
                 Designed for Impact
                 <br/>
-                Engineered for Results
+                Engineered for Results */}
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               </p>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 justify-center opacity-100 gap-5">
