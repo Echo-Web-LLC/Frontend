@@ -9,7 +9,7 @@ function Nav(props) {
     return (
         <>
             <nav class="flex shadow-lg">
-                <img class='hover:drop-shadow-xl w-48 pl-12 relative sm:left-12 drop-shadow-lg' src={logo} alt="logo"/>
+                <img class='hover:drop-shadow-xl w-48 pl-12 relative sm:left-12 drop-shadow-lg z-10' src={logo} alt="logo"/>
              
                 {/* <div className='Navigation_Bar'> */}
                 {/* <Link to='about' className='Link'>
@@ -30,7 +30,7 @@ function Nav(props) {
                     Contact
                 </Link> */}
 <a
-  class="group absolute right-10 sm:right-20 rounded shadow-lg hover:shadow-2xl px-8 py-2 transition bg-white inline-flex items-center overflow-hidden border-current sm:px-8 mt-6 focus:outline-none focus:ring active:text-gray-700 mb-5"
+  class="group absolute right-10 sm:right-20 rounded shadow-lg hover:shadow-2xl px-8 py-2 transition bg-white inline-flex items-center overflow-hidden border-current sm:px-8 mt-6 focus:outline-none focus:ring active:text-gray-700 mb-5 z-10"
   href="https://ixqu3aocu0m.typeform.com/to/WpcyelXK"
 >
   <span class="absolute -end-full transition-all group-hover:end-4">

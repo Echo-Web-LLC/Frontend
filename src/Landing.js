@@ -35,12 +35,12 @@ const Landing = () => {
         <meta name='Landing Page' content='Call to actions and information about Echo Web, LLC.'/>
       </Helmet>
       <div className="grid grid-cols-1">
-        <section id="fade-in" className="overflow flex justify-center items-center hadow-lg bg-white">
+        <section id="fade-in" className="overflow flex justify-center items-center hadow-lg bg-white z-10">
           <video
           src={vid1}
           autoPlay
           muted
-          className="opacity-100 bg-cover object-cover w-full h-full fixed top-0 left-0 z-0"
+          className="opacity-100 bg-cover object-cover w-full h-full fixed top-0 left-0 -z-10"
         />
           <div>
             <div className="shadow-lg mb-40 hover:shadow-2xl bg-gray-50 bg-opacity-25 rounded-md fade-in-comp mx-auto max-w-2xl text-center p-10 sm:p-32 lg:p-20">
